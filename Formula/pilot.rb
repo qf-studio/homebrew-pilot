@@ -5,21 +5,21 @@
 class Pilot < Formula
   desc "AI that ships your tickets — autonomous development pipeline"
   homepage "https://pilot.quantflow.studio"
-  version "2.89.3"
+  version "2.89.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/qf-studio/pilot/releases/download/v2.89.3/pilot-darwin-amd64.tar.gz"
-      sha256 "6223c250a3903e35e28ca0dbfbe587426ce55a81d8734ce381a83e40751b853e"
+      url "https://github.com/qf-studio/pilot/releases/download/v2.89.4/pilot-darwin-amd64.tar.gz"
+      sha256 "3e351a0334144d9e6343a37c87ace061490165dd459bf6d225a4c27e3868024f"
 
       define_method(:install) do
         bin.install "pilot"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/qf-studio/pilot/releases/download/v2.89.3/pilot-darwin-arm64.tar.gz"
-      sha256 "472780078d6cbf02961bd5ebb8d60ea036fb7a357de1ab3efa408716e10ebe20"
+      url "https://github.com/qf-studio/pilot/releases/download/v2.89.4/pilot-darwin-arm64.tar.gz"
+      sha256 "da67636854af5222e9b2100851aaa78727e58d8381c4801baa5b08720a81bfca"
 
       define_method(:install) do
         bin.install "pilot"
@@ -29,15 +29,15 @@ class Pilot < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/qf-studio/pilot/releases/download/v2.89.3/pilot-linux-amd64.tar.gz"
-      sha256 "2812070513a09b5ea0ca9a5bfb6c220181529856f7671a32a41b2bef3c38478b"
+      url "https://github.com/qf-studio/pilot/releases/download/v2.89.4/pilot-linux-amd64.tar.gz"
+      sha256 "00c6bbaadd221c49854b7165007d493b792ea893609609252b80a92903c67249"
       define_method(:install) do
         bin.install "pilot"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/qf-studio/pilot/releases/download/v2.89.3/pilot-linux-arm64.tar.gz"
-      sha256 "50c039b2290a011f148c8b6c6528e97a91442154bcc062049241fafb26562af5"
+      url "https://github.com/qf-studio/pilot/releases/download/v2.89.4/pilot-linux-arm64.tar.gz"
+      sha256 "d2d04fa301118790a78dbaaa54937a08fd298da4e4d83c3cc83925bdcc4893a2"
       define_method(:install) do
         bin.install "pilot"
       end
