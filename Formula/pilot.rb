@@ -5,21 +5,21 @@
 class Pilot < Formula
   desc "AI that ships your tickets — autonomous development pipeline"
   homepage "https://pilot.quantflow.studio"
-  version "2.134.2"
+  version "2.135.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/qf-studio/pilot/releases/download/v2.134.2/pilot-darwin-amd64.tar.gz"
-      sha256 "b8e7c8374b95640ce8d22c66edd68aada8245a0031c15b6ec3095c3047301b70"
+      url "https://github.com/qf-studio/pilot/releases/download/v2.135.0/pilot-darwin-amd64.tar.gz"
+      sha256 "8e7bf82437cbc1c60d9202a305befc1dfb2cc6d182fa1fc35a17fe255ae0813a"
 
       define_method(:install) do
         bin.install "pilot"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/qf-studio/pilot/releases/download/v2.134.2/pilot-darwin-arm64.tar.gz"
-      sha256 "8ff011714def20eb818c624cba01b7b7e1d0fe6112a9ce5b505a4fd72d0a95e0"
+      url "https://github.com/qf-studio/pilot/releases/download/v2.135.0/pilot-darwin-arm64.tar.gz"
+      sha256 "d23bfe62ded892e88b85a6c8d8baad84e2338cc09330de6ed4e81f932244a910"
 
       define_method(:install) do
         bin.install "pilot"
@@ -29,15 +29,15 @@ class Pilot < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/qf-studio/pilot/releases/download/v2.134.2/pilot-linux-amd64.tar.gz"
-      sha256 "67834dd4dd2220d2b1c97bfc995d19aed152adcec8e14cd8d29b921fc89fdddd"
+      url "https://github.com/qf-studio/pilot/releases/download/v2.135.0/pilot-linux-amd64.tar.gz"
+      sha256 "893e5d9261a64111ffc5852624cb9fb263d0b4ce7f25cacb3cfb14c21b742d10"
       define_method(:install) do
         bin.install "pilot"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/qf-studio/pilot/releases/download/v2.134.2/pilot-linux-arm64.tar.gz"
-      sha256 "28a7585aba1c8f2a7e22c56e76308ad896583b6926e9aca624469c8ee8dd0112"
+      url "https://github.com/qf-studio/pilot/releases/download/v2.135.0/pilot-linux-arm64.tar.gz"
+      sha256 "74a00cc605cc0616134438a7efda7cce2f8f8e1b9e9dc4144de58bd4dbae4793"
       define_method(:install) do
         bin.install "pilot"
       end
